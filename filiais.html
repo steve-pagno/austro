@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filiais - AUSTRO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { austroBlue: '#0A1128', austroGold: '#B58A30', austroLight: '#F8F9FA' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-austroLight text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"><img class="h-12 w-auto" src="logo-austro.png" alt="Austro Seguros"></a>
+                </div>
+                
+                <nav class="hidden md:flex space-x-6 text-sm font-semibold text-austroBlue">
+                    <a href="quem-somos.html" class="hover:text-austroGold transition">Quem somos</a>
+                    <a href="equipe.html" class="hover:text-austroGold transition">Equipe técnica</a>
+                    <a href="index.html#ramos" class="hover:text-austroGold transition">Ramos que atuamos</a>
+                    <a href="filiais.html" class="hover:text-austroGold transition">Filiais</a>
+                    <a href="avise-sinistro.html" class="hover:text-austroGold transition">Avise um sinistro</a>
+                </nav>
+                
+                <div class="hidden md:flex">
+                    <a href="cotacao.html" class="bg-austroGold text-white px-5 py-2 rounded-md font-semibold hover:bg-yellow-600 transition shadow-lg">Faça uma cotação</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-austroBlue hover:text-austroGold focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-austroLight border-t border-gray-200 shadow-inner">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="quem-somos.html" class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Quem somos</a>
+                <a href="equipe.html" class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Equipe técnica</a>
+                <a href="index.html#ramos" class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Ramos que atuamos</a>
+                <a href="filiais.html" class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Filiais</a>
+                <a href="avise-sinistro.html" class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Avise um sinistro</a>
+                <a href="cotacao.html" class="block w-full text-center px-3 py-3 mt-4 text-base font-bold text-white bg-austroGold rounded-md shadow-md">Faça uma cotação</a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <main class="flex-grow">
+        <section class="bg-austroBlue text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl font-bold mb-4">Nossas Filiais</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Sempre perto de você para oferecer o melhor atendimento.</p>
+            </div>
+        </section>
+
+        <section class="py-16 bg-austroLight">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                        <h2 class="text-2xl font-bold text-austroBlue mb-4">Matriz - São Paulo</h2>
+                        <p class="text-gray-600 mb-2"><strong>Endereço:</strong> Av. Lorem Ipsum, 1000 - Itaim Bibi</p>
+                        <p class="text-gray-600 mb-2"><strong>Telefone:</strong> (11) 0000-0000</p>
+                        <p class="text-gray-600 mb-4"><strong>E-mail:</strong> sp@austroseguros.com.br</p>
+                        <div class="h-48 bg-gray-200 rounded">
+                            <img src="https://via.placeholder.com/400x200?text=Mapa+SP" class="w-full h-full object-cover rounded" alt="Mapa">
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                        <h2 class="text-2xl font-bold text-austroBlue mb-4">Filial - Paraná</h2>
+                        <p class="text-gray-600 mb-2"><strong>Endereço:</strong> Rua Dolor Sit Amet, 500 - Centro</p>
+                        <p class="text-gray-600 mb-2"><strong>Telefone:</strong> (41) 0000-0000</p>
+                        <p class="text-gray-600 mb-4"><strong>E-mail:</strong> pr@austroseguros.com.br</p>
+                        <div class="h-48 bg-gray-200 rounded">
+                            <img src="https://via.placeholder.com/400x200?text=Mapa+PR" class="w-full h-full object-cover rounded" alt="Mapa">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-austroBlue text-white py-8 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">&copy; 2026 AUSTRO Inovação em Seguros. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

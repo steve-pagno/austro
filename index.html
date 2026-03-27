@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUSTRO - Inovação em Seguros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        austroBlue: '#0A1128',
+                        austroGold: '#B58A30',
+                        austroLight: '#F8F9FA'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-austroLight text-gray-800 font-sans antialiased">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"><img class="h-12 w-auto" src="logo-austro.png" alt="Austro Seguros"></a>
+                </div>
+
+                <nav class="hidden md:flex space-x-6 text-sm font-semibold text-austroBlue">
+                    <a href="quem-somos.html" class="hover:text-austroGold transition">Quem somos</a>
+                    <a href="equipe.html" class="hover:text-austroGold transition">Equipe técnica</a>
+                    <a href="index.html#ramos" class="hover:text-austroGold transition">Ramos que atuamos</a>
+                    <a href="filiais.html" class="hover:text-austroGold transition">Filiais</a>
+                    <a href="avise-sinistro.html" class="hover:text-austroGold transition">Avise um sinistro</a>
+                </nav>
+
+                <div class="hidden md:flex">
+                    <a href="cotacao.html"
+                        class="bg-austroGold text-white px-5 py-2 rounded-md font-semibold hover:bg-yellow-600 transition shadow-lg">Faça
+                        uma cotação</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-austroBlue hover:text-austroGold focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-austroLight border-t border-gray-200 shadow-inner">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="quem-somos.html"
+                    class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Quem somos</a>
+                <a href="equipe.html"
+                    class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Equipe
+                    técnica</a>
+                <a href="index.html#ramos"
+                    class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Ramos que
+                    atuamos</a>
+                <a href="filiais.html"
+                    class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Filiais</a>
+                <a href="avise-sinistro.html"
+                    class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Avise um
+                    sinistro</a>
+                <a href="cotacao.html"
+                    class="block w-full text-center px-3 py-3 mt-4 text-base font-bold text-white bg-austroGold rounded-md shadow-md">Faça
+                    uma cotação</a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <section class="bg-austroBlue text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center sm:px-6 lg:px-8">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Proteção Inteligente para o seu Negócio</h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu
+                sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+            </p>
+            <a href="quem-somos.html" class="text-austroGold font-semibold hover:underline">Conheça mais sobre nossa
+                atuação &rarr;</a>
+        </div>
+    </section>
+
+    <section id="ramos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-austroBlue mb-12">Ramos que Atuamos</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="ramo-detalhe.html"
+                    class="group block bg-austroLight rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gray-300 relative">
+                        <img src="https://via.placeholder.com/400x200?text=Agricola" alt="Agrícola"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-austroBlue mb-2">Agrícola</h3>
+                        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus nec iaculis mauris.</p>
+                    </div>
+                </a>
+
+                <a href="ramo-detalhe.html"
+                    class="group block bg-austroLight rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gray-300 relative">
+                        <img src="https://via.placeholder.com/400x200?text=RD+Equipamentos" alt="RD Equipamentos"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-austroBlue mb-2">RD Equipamentos</h3>
+                        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus nec iaculis mauris.</p>
+                    </div>
+                </a>
+
+                <a href="ramo-detalhe.html"
+                    class="group block bg-austroLight rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gray-300 relative">
+                        <img src="https://via.placeholder.com/400x200?text=Property" alt="Property"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-austroBlue mb-2">Property</h3>
+                        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus nec iaculis mauris.</p>
+                    </div>
+                </a>
+
+                <a href="ramo-detalhe.html"
+                    class="group block bg-austroLight rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gray-300 relative">
+                        <img src="https://via.placeholder.com/400x200?text=Engenharia" alt="Engenharia"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-austroBlue mb-2">Engenharia</h3>
+                        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus nec iaculis mauris.</p>
+                    </div>
+                </a>
+
+                <a href="ramo-detalhe.html"
+                    class="group block bg-austroLight rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gray-300 relative">
+                        <img src="https://via.placeholder.com/400x200?text=Resp.+Civil" alt="Responsabilidade Civil"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-austroBlue mb-2">Resp. Civil Geral e Prof.</h3>
+                        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus nec iaculis mauris.</p>
+                    </div>
+                </a>
+
+                <a href="ramo-detalhe.html"
+                    class="group block bg-austroLight rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="h-48 bg-gray-300 relative">
+                        <img src="https://via.placeholder.com/400x200?text=Garantia+e+Credito" alt="Garantia e Crédito"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-austroBlue mb-2">Garantia e Crédito</h3>
+                        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus nec iaculis mauris.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-austroGold">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Pronto para proteger o seu patrimônio?</h2>
+            <p class="text-white mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim
+                in eros elementum tristique.</p>
+            <a href="cotacao.html"
+                class="inline-block bg-austroBlue text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-gray-800 transition shadow-xl">
+                Faça uma Cotação Agora
+            </a>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-austroBlue mb-6">Nossa Sede</h2>
+                <p class="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui
+                    mauris.</p>
+
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-austroGold mr-3 mt-1" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <div>
+                            <h4 class="font-bold text-austroBlue">Endereço</h4>
+                            <p class="text-gray-600">Av. Lorem Ipsum, 1000 - Sala 402<br>Bairro Dolor -
+                                Cidade/UF<br>CEP: 00000-000</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 text-austroGold mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                            </path>
+                        </svg>
+                        <div>
+                            <h4 class="font-bold text-austroBlue">Telefone</h4>
+                            <p class="text-gray-600">(00) 0000-0000</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 text-austroGold mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                        <div>
+                            <h4 class="font-bold text-austroBlue">E-mail</h4>
+                            <p class="text-gray-600">contato@austroseguros.com.br</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="h-80 bg-gray-200 rounded-lg overflow-hidden shadow-inner">
+                <img src="https://via.placeholder.com/800x600?text=Mapa+de+Localizacao" alt="Mapa"
+                    class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-austroBlue text-white py-8 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">&copy; 2026 AUSTRO Inovação em Seguros. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

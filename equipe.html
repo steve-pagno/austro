@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe Técnica - AUSTRO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { austroBlue: '#0A1128', austroGold: '#B58A30', austroLight: '#F8F9FA' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-austroLight text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"><img class="h-12 w-auto" src="logo-austro.png" alt="Austro Seguros"></a>
+                </div>
+                
+                <nav class="hidden md:flex space-x-6 text-sm font-semibold text-austroBlue">
+                    <a href="quem-somos.html" class="hover:text-austroGold transition">Quem somos</a>
+                    <a href="equipe.html" class="hover:text-austroGold transition">Equipe técnica</a>
+                    <a href="index.html#ramos" class="hover:text-austroGold transition">Ramos que atuamos</a>
+                    <a href="filiais.html" class="hover:text-austroGold transition">Filiais</a>
+                    <a href="avise-sinistro.html" class="hover:text-austroGold transition">Avise um sinistro</a>
+                </nav>
+                
+                <div class="hidden md:flex">
+                    <a href="cotacao.html" class="bg-austroGold text-white px-5 py-2 rounded-md font-semibold hover:bg-yellow-600 transition shadow-lg">Faça uma cotação</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-austroBlue hover:text-austroGold focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-austroLight border-t border-gray-200 shadow-inner">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="quem-somos.html" class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Quem somos</a>
+                <a href="equipe.html" class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Equipe técnica</a>
+                <a href="index.html#ramos" class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Ramos que atuamos</a>
+                <a href="filiais.html" class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Filiais</a>
+                <a href="avise-sinistro.html" class="block px-3 py-2 text-base font-semibold text-austroBlue hover:text-austroGold">Avise um sinistro</a>
+                <a href="cotacao.html" class="block w-full text-center px-3 py-3 mt-4 text-base font-bold text-white bg-austroGold rounded-md shadow-md">Faça uma cotação</a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <main class="flex-grow">
+        <section class="bg-austroBlue text-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl font-bold mb-4">Nossa Equipe Técnica</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Especialistas dedicados a encontrar as melhores soluções em seguros para o seu negócio.</p>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-40 h-40 mx-auto bg-gray-300 rounded-full mb-4 overflow-hidden shadow-md">
+                            <img src="https://via.placeholder.com/150" alt="João Silva" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold text-austroBlue">João Silva</h3>
+                        <p class="text-austroGold font-semibold">Diretor Técnico</p>
+                        <p class="text-gray-500 text-sm mt-2">Especialista em Property e Engenharia.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-40 h-40 mx-auto bg-gray-300 rounded-full mb-4 overflow-hidden shadow-md">
+                            <img src="https://via.placeholder.com/150" alt="Maria Souza" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold text-austroBlue">Maria Souza</h3>
+                        <p class="text-austroGold font-semibold">Gerente Agrícola</p>
+                        <p class="text-gray-500 text-sm mt-2">15 anos de experiência no agronegócio.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-40 h-40 mx-auto bg-gray-300 rounded-full mb-4 overflow-hidden shadow-md">
+                            <img src="https://via.placeholder.com/150" alt="Carlos Mendes" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold text-austroBlue">Carlos Mendes</h3>
+                        <p class="text-austroGold font-semibold">Especialista RC</p>
+                        <p class="text-gray-500 text-sm mt-2">Foco em Responsabilidade Civil Geral.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-40 h-40 mx-auto bg-gray-300 rounded-full mb-4 overflow-hidden shadow-md">
+                            <img src="https://via.placeholder.com/150" alt="Ana Costa" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold text-austroBlue">Ana Costa</h3>
+                        <p class="text-austroGold font-semibold">Garantia & Crédito</p>
+                        <p class="text-gray-500 text-sm mt-2">Análise de riscos e contratos complexos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-austroBlue text-white py-8 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">&copy; 2026 AUSTRO Inovação em Seguros. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

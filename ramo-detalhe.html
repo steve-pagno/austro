@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguro Agrícola - AUSTRO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: { colors: { austroBlue: '#0A1128', austroGold: '#B58A30', austroLight: '#F8F9FA' } }
+            }
+        }
+    </script>
+</head>
+<body class="bg-austroLight text-gray-800 font-sans antialiased">
+
+    <section class="bg-austroBlue text-white py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+            <div>
+                <h1 class="text-4xl font-bold mb-4">Seguro Agrícola</h1>
+                <p class="text-gray-300 max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+            </div>
+            <div class="mt-8 md:mt-0">
+                <a href="cotacao.html" class="bg-austroGold text-white px-8 py-3 rounded-md font-bold hover:bg-yellow-600 transition shadow-lg inline-block">Fazer Cotação Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-austroBlue mb-6">Descrição do Ramo</h2>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-austroLight p-6 rounded-lg border-l-4 border-austroBlue">
+                    <h3 class="text-xl font-bold text-austroBlue mb-4">Coberturas Básicas</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Consectetur adipiscing elit</li>
+                        <li>Sed do eiusmod tempor</li>
+                        <li>Incididunt ut labore</li>
+                    </ul>
+                </div>
+
+                <div class="bg-austroLight p-6 rounded-lg border-l-4 border-austroGold">
+                    <h3 class="text-xl font-bold text-austroBlue mb-4">Coberturas Adicionais</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Ut enim ad minim veniam</li>
+                        <li>Quis nostrud exercitation</li>
+                        <li>Ullamco laboris nisi</li>
+                        <li>Aliquip ex ea commodo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-austroLight border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold text-austroBlue mb-6">Gostou das coberturas? Proteja-se hoje mesmo.</h3>
+            <a href="cotacao.html" class="inline-block bg-austroGold text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-yellow-600 transition shadow-lg">
+                Solicitar Cotação para Agrícola
+            </a>
+        </div>
+    </section>
+
+    </body>
+</html>
